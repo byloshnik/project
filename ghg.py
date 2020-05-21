@@ -14,7 +14,22 @@ def handle_start(message) :
 def handle_message(message):
     bot.send_message(message.chat.id, "Сейчас появится кнопка")
     markup = types.InlineKeyboardMarkup(row_width=2)
-    item1 = types.InlineKeyboardButton("Остров 1", callback_data="bot1")
+
+
+    directory = "/Users/byloshnik/Desktop/japan/"
+    img1 = open(directory + "ozero.jpg", "rb")
+    bot.send_photo(message.from_user.id, img1, "Кровавый пруд представляет собой источник Беллу, имеющий цвет воды красного оттенка, "
+                                               "напоминающий кровь. Водоем является одной из самых интересных достопримечательностей Японии "
+                                               "и привлекает множество туристов своим удивительным видом и мистическим легендами, связанными "
+                                               "с его происхождением."
+
+                                               "Японское название пруда Chinoike Jigoku в переводе означает 'Ад', что не удивительно, поскольку "
+                                               "вода кровавого цвета и клубы пара, поднимающиеся над водоемом действительно напоминают это место. "
+                                               "С этим названием пруда связана легенда, которая гласит о душах грешников, покоящихся в его водах. "
+                                               "Учеными необычный цвет воды пруда объясняется большим количеством оксидов железа и магния, а пар "
+                                               "поднимается от высокой температуры источника, которая поддерживается гейзером.")
+
+    item1 = types.InlineKeyboardButton("Достопримечательность 1", callback_data="bot1")
     item2 = types.InlineKeyboardButton("Остров 2", callback_data="bot1")
     item3 = types.InlineKeyboardButton("Остров 3", callback_data="bot1")
     item4 = types.InlineKeyboardButton("Остров 4", callback_data="bot1")
